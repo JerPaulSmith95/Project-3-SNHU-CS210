@@ -1,2 +1,15 @@
 # Project-3-SNHU-CS210
 This is the code that I created for the third Project in my CS210: Programming Languages course at SNHU. It takes a file input of an itemized list, reads through each line, and adds/updates a count of each word using a map function, and displays user requested information based off of a menu display, all in C++.
+
+What I would like to highlight in this program is the layered use of the map function. In the code that exists below, I used an if condition to return a value of 0 if a new word was detected that was not already in the created map and a value of 1 if it was. 
+Depending on was value was returned would make the program do one of two options:
+1) It would enter a new key and update its value to "1", meaning that it was seen one time
+2) Or it would add one to the value count if the value had already been registered to the key
+
+If I were to spend more time on this program, I would like to implement a proper class for each menu option instead of having each menu option exist within the Main.cpp file as a function outside of main. I think that this could imporve the readability of my code and cut down on what is in the Main.cpp file. I would also like to add in the file reader and file creation functions as their own class, essentially limiting main() to be as minimal and effiecient as possible.
+
+When it comes to the parts that I found were the msot challenging to write,  implementing the Item Search header and cpp classes proved to be a challenge. Mainly because I wanterd to add more setters and getters at first, and after trying to get and set every little thing proved to be much more complex, I ended up simplifying down to what is in the code. However, I think that simpler is often times better when it comes to programming as the more complex the code becomes for simple tasks, the more likely you are to encounter errors and unexpected bugs.
+
+There are several keys skills in this project that can prove vital to work in the future, such as working with files (opening, closing, and creating the files), using multiple aspects of the map function (such as .count, .emplace, and .at), as well as the proper implementation of functions and classes.
+
+To make the program maintainable, I made sure to include an in-line comment for almost every line of code explaing what it does and what should be expected in terms of input from the user and output from the program. To make it readable, I made sure to seperate different apects of the code into its own "blocks", meaning that I implemented lots of whitespace so that each aspect of the code is clearly seen. For example, the while loop that goes through the file that is opened and updates the map accordingly is in its own space, seperate form the code that comes before and after. the program remains adaptable in that there is proper input validation throughout that can be updated to allow for more menu options, as wel as allowing for the creation of those menu functions in the code itself, since every menu function that exists currently only manipulastes information within itself.
